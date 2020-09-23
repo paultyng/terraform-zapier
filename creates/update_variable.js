@@ -71,7 +71,7 @@ module.exports = {
         key: 'variable_id',
         label: 'Variable',
         type: 'string',
-        dynamic: 'list_workspace_variables.id.attributes__name',
+        dynamic: 'list_workspace_variables.id.attributes__key',
         required: true,
         list: false,
         altersDynamicFields: false,
