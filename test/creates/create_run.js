@@ -19,7 +19,10 @@ describe('Create - create_run', () => {
         oauth_token_secret: process.env.OAUTH_TOKEN_SECRET,
       },
 
-      inputData: {},
+      inputData: {
+        workspace_id: 'ws-zWGn17bGEkcCScDJ',
+        message: 'This is a test run',
+      },
     };
 
     const result = await appTester(

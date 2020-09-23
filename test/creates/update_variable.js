@@ -23,7 +23,7 @@ describe('Create - update_variable', () => {
         // https://app.terraform.io/api/v2/workspaces/ws-zWGn17bGEkcCScDJ/vars?filter%5Bworkspace%5D%5Bid%5D=ws-zWGn17bGEkcCScDJ
         workspace_id: 'ws-zWGn17bGEkcCScDJ',
         variable_id: 'var-G4dskNFtdXDh9eyn',
-        value: 'value2',
+        value: '"value2"',
       },
     };
 

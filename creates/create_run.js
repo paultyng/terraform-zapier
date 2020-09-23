@@ -1,11 +1,43 @@
-module.exports = {
-  operation: {
-    perform: {
-      body: {
-        message: '{{bundle.inputData.message}}',
-        workspace_id: '{{bundle.inputData.workspace_id}}',
+const perform = (z, bundle) => {
+  const options = {
+    url: `https://app.terraform.io/api/v2/runs`,
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${bundle.authData.token}`,
+      'Content-Type': 'application/vnd.api+json',
+    },
+    body: {
+      data: {
+        type: 'runs',
+        attributes: {
+          // 'is-destroy': bundle.inputData.is_destroy,
+          message: bundle.inputData.message,
+          // target-addrs
+        },
+        relationships: {
+          workspace: {
+            data: {
+              type: 'workspaces',
+              id: bundle.inputData.workspace_id,
+            },
+          },
+        },
       },
     },
+  };
+
+  return z.request(options).then((response) => {
+    response.throwForStatus();
+    const results = response.json;
+
+    // You can do any parsing you need for results here before returning them
+    return results.data;
+  });
+};
+
+module.exports = {
+  operation: {
+    perform: perform,
     sample: {
       "data": {
         "id": "run-CZcmD7eagjhyX0vN",
@@ -73,6 +105,9 @@ module.exports = {
         list: false,
         altersDynamicFields: false,
       },
+      // {
+      //   key: 
+      // }
     ],
   },
   key: 'create_run',
