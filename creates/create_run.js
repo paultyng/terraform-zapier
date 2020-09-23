@@ -104,6 +104,7 @@ module.exports = {
         required: false,
         list: false,
         altersDynamicFields: false,
+        helpText: 'This is an optional message to show for the run.',
       },
       // {
       //   key: 

@@ -83,6 +83,7 @@ module.exports = {
         required: true,
         list: false,
         altersDynamicFields: false,
+        helpText: 'The value to set for the variable. If the variable was configured as HCL, this valid must use valid HCL syntax (ie. quoted strings, etc.).',
       },
     ],
   },

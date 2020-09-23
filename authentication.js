@@ -25,6 +25,9 @@ module.exports = {
       required: true,
       label: 'API Token',
       type: 'password',
+      helpText: 'This can be a user or team API token. We recommend creating a "Zapier" team for your organization ' +
+        'and then using the token for that team. You can manage your user tokens in your settings: ' +
+        'https://app.terraform.io/app/settings/tokens',
     },
     {
       computed: false,
@@ -32,6 +35,8 @@ module.exports = {
       required: true,
       label: 'Organization',
       type: 'string',
+      helpText: 'This is the organization name, you can view your organizations in your settings: ' +
+        'https://app.terraform.io/app/settings/organizations',
     },
   ],
   customConfig: {},
