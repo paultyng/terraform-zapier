@@ -115,7 +115,8 @@ module.exports = {
   noun: 'Run',
   display: {
     label: 'Create a Run',
-    description: 'A run performs a plan and apply.',
+    description: 'A run performs a plan and apply. You may want to set your ' +
+      '`Apply Method` to `Auto apply` for the workspace in the `General Settings`.',
     hidden: false,
     important: true,
   },
