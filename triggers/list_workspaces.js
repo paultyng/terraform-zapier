@@ -23,76 +23,96 @@ module.exports = {
     perform: perform,
     canPaginate: false,
     sample: {
-      id: 'ws-edkHutTp89sMpmP5',
-      type: 'workspaces',
-      attributes: {
-        name: 'home-network',
-        'auto-apply': false,
-        'created-at': '2020-01-02T19:56:29.993Z',
-        environment: 'default',
-        locked: false,
-        'queue-all-runs': false,
-        'terraform-version': '0.13.2',
-        'working-directory': '',
-        'speculative-enabled': true,
-        'allow-destroy-plan': false,
-        'auto-destroy-at': null,
-        'latest-change-at': '2020-09-13T18:17:46.467Z',
-        operations: true,
-        'execution-mode': 'agent',
-        'vcs-repo': {
-          branch: '',
-          'ingress-submodules': false,
-          identifier: 'paultyng/home-network',
-          'display-identifier': 'paultyng/home-network',
-          'github-app-installation-id': 'ghain-jE8WZa2Qdmisumh3',
-        },
-        'vcs-repo-identifier': 'paultyng/home-network',
-        permissions: {
-          'can-update': false,
-          'can-destroy': false,
-          'can-queue-destroy': true,
-          'can-queue-run': true,
-          'can-queue-apply': true,
-          'can-read-state-versions': true,
-          'can-create-state-versions': true,
-          'can-read-variable': true,
-          'can-update-variable': true,
-          'can-lock': true,
-          'can-unlock': true,
-          'can-force-unlock': false,
-          'can-read-settings': true,
-        },
-        actions: { 'is-destroyable': false },
-        description: null,
-        'file-triggers-enabled': false,
-        'trigger-prefixes': [],
-        source: 'tfe-ui',
-        'source-name': null,
-        'source-url': null,
-      },
-      relationships: {
-        organization: { data: { id: 'paultyng', type: 'organizations' } },
-        'current-run': {
-          data: { id: 'run-nFJmdY8VstXG6CBR', type: 'runs' },
-          links: { related: '/api/v2/runs/run-nFJmdY8VstXG6CBR' },
-        },
-        'latest-run': {
-          data: { id: 'run-nFJmdY8VstXG6CBR', type: 'runs' },
-          links: { related: '/api/v2/runs/run-nFJmdY8VstXG6CBR' },
-        },
-        'current-state-version': {
-          data: { id: 'sv-BKgV4FbdvaKsEhpR', type: 'state-versions' },
-          links: {
-            related:
-              '/api/v2/workspaces/ws-edkHutTp89sMpmP5/current-state-version',
+      "data": [
+        {
+          "id": "ws-SihZTyXKfNXUWuUa",
+          "type": "workspaces",
+          "attributes": {
+            "auto-apply": false,
+            "allow-destroy-plan": false,
+            "can-queue-destroy-plan": false,
+            "created-at": "2017-11-02T23:24:05.997Z",
+            "description": null,
+            "environment": "default",
+            "file-triggers-enabled": true,
+            "locked": false,
+            "name": "workspace-2",
+            "queue-all-runs": false,
+            "source": "tfe-ui",
+            "source-name": null,
+            "source-url": null,
+            "terraform-version": "0.10.8",
+            "trigger-prefixes": [],
+            "vcs-repo": {
+              "branch": "",
+              "default-branch": true,
+              "ingress-submodules": false
+            },
+            "working-directory": ""
           },
+          "relationships": {
+            "organization": {
+              "data": {
+                "id": "my-organization",
+                "type": "organizations"
+              }
+            },
+            "ssh-key": {
+              "data": null
+            },
+            "latest-run": {
+              "data": null
+            }
+          },
+          "links": {
+            "self": "/api/v2/organizations/my-organization/workspaces/workspace-2"
+          }
         },
-        'agent-pool': {
-          data: { id: 'apool-T9mYAYemBBrn4mXo', type: 'agent-pools' },
-        },
-      },
-      links: { self: '/api/v2/organizations/paultyng/workspaces/home-network' },
+        {
+          "id": "ws-YnyXLq9fy38afEeb",
+          "type": "workspaces",
+          "attributes": {
+            "auto-apply": false,
+            "allow-destroy-plan": false,
+            "can-queue-destroy-plan": false,
+            "created-at": "2017-11-02T23:23:53.765Z",
+            "description": null,
+            "environment": "default",
+            "file-triggers-enabled": true,
+            "locked": false,
+            "name": "workspace-1",
+            "queue-all-runs": false,
+            "source": "tfe-ui",
+            "source-name": null,
+            "source-url": null,
+            "terraform-version": "0.10.8",
+            "trigger-prefixes": [],
+            "vcs-repo": {
+              "branch": "",
+              "default-branch": true,
+              "ingress-submodules": false
+            },
+            "working-directory": ""
+          },
+          "relationships": {
+            "organization": {
+              "data": {
+                "id": "my-organization",
+                "type": "organizations"
+              }
+            },
+            "ssh-key": {
+              "data": null
+            },
+            "latest-run": {
+              "data": null
+            }
+          },
+          "links": {
+            "self": "/api/v2/organizations/my-organization/workspaces/workspace-1"
+          }
+        }
+      ]
     },
     outputFields: [
       { key: 'id', label: 'ID' },
