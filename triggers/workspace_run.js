@@ -80,61 +80,56 @@ module.exports = {
     ],
 
     sample: {
-      "data": [
-        {
-          "id": "run-bWSq4YeYpfrW4mx7",
-          "type": "runs",
-          "attributes": {
-            "auto-apply": false,
-            "error-text": null,
-            "is-destroy": false,
-            "message": "",
-            "metadata": {},
-            "source": "tfe-configuration-version",
-            "status": "planned",
-            "status-timestamps": {
-              "planned-at": "2017-11-28T22:52:51+00:00"
-            },
-            "terraform-version": "0.11.0",
-            "created-at": "2017-11-28T22:52:46.711Z",
-            "has-changes": true,
-            "actions": {
-              "is-cancelable": false,
-              "is-confirmable": true,
-              "is-discardable": true,
-              "is-force-cancelable": false
-            },
-            "permissions": {
-              "can-apply": true,
-              "can-cancel": true,
-              "can-discard": true,
-              "can-force-cancel": false,
-              "can-force-execute": true
-            }
-          },
-          "relationships": {
-            // "workspace": {...},
-            // "apply": {...},
-            // "canceled-by": {...},
-            // "configuration-version": {...},
-            // "confirmed-by": {...},
-            // "cost-estimate": {...},
-            // "created-by": {...},
-            // "input-state-version": {...},
-            // "plan": {...},
-            // "run-events": {...},
-            // "policy-checks": {...},
-            // "comments": {...},
-            // "workspace-run-alerts": {...},
-            // "triggering-source": {...},
-            // "triggering-run": {...}
-          },
-          "links": {
-            "self": "/api/v2/runs/run-bWSq4YeYpfrW4mx7"
-          }
+      "id": "run-bWSq4YeYpfrW4mx7",
+      "type": "runs",
+      "attributes": {
+        "auto-apply": false,
+        "error-text": null,
+        "is-destroy": false,
+        "message": "",
+        "metadata": {},
+        "source": "tfe-configuration-version",
+        "status": "planned",
+        "status-timestamps": {
+          "planned-at": "2017-11-28T22:52:51+00:00"
         },
-        // { ...}
-      ]
+        "terraform-version": "0.11.0",
+        "created-at": "2017-11-28T22:52:46.711Z",
+        "has-changes": true,
+        "actions": {
+          "is-cancelable": false,
+          "is-confirmable": true,
+          "is-discardable": true,
+          "is-force-cancelable": false
+        },
+        "permissions": {
+          "can-apply": true,
+          "can-cancel": true,
+          "can-discard": true,
+          "can-force-cancel": false,
+          "can-force-execute": true
+        }
+      },
+      "relationships": {
+        // "workspace": {...},
+        // "apply": {...},
+        // "canceled-by": {...},
+        // "configuration-version": {...},
+        // "confirmed-by": {...},
+        // "cost-estimate": {...},
+        // "created-by": {...},
+        // "input-state-version": {...},
+        // "plan": {...},
+        // "run-events": {...},
+        // "policy-checks": {...},
+        // "comments": {...},
+        // "workspace-run-alerts": {...},
+        // "triggering-source": {...},
+        // "triggering-run": {...}
+      },
+      "links": {
+        "self": "/api/v2/runs/run-bWSq4YeYpfrW4mx7"
+      }
     },
 
     outputFields: [
