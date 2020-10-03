@@ -1,3 +1,5 @@
+// https://www.terraform.io/docs/cloud/api/workspace-variables.html#list-variables
+
 const perform = (z, bundle) => {
     const options = {
         url: `https://app.terraform.io/api/v2/workspaces/${bundle.inputData.workspace_id}/vars`,
@@ -20,8 +22,9 @@ const perform = (z, bundle) => {
 
 module.exports = {
     operation: {
-        perform: perform,
         canPaginate: false,
+        perform: perform,
+
         sample: {
             "data": [
                 {

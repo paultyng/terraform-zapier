@@ -1,4 +1,14 @@
+// https://www.terraform.io/docs/cloud/api/workspaces.html#list-workspaces
+
 const perform = (z, bundle) => {
+  const params = {
+    'page[number]': bundle.meta.page + 1,
+  };
+
+  if (bundle.meta.limit > 0) {
+    params['page[size]'] = bundle.meta.limit;
+  }
+
   const options = {
     url: `https://app.terraform.io/api/v2/organizations/${bundle.authData.organization}/workspaces`,
     method: 'GET',
@@ -6,7 +16,7 @@ const perform = (z, bundle) => {
       Authorization: `Bearer ${bundle.authData.token}`,
       'Content-Type': 'application/vnd.api+json',
     },
-    params: {},
+    params,
   };
 
   return z.request(options).then((response) => {
@@ -20,8 +30,9 @@ const perform = (z, bundle) => {
 
 module.exports = {
   operation: {
+    canPaginate: true,
     perform: perform,
-    canPaginate: false,
+
     sample: {
       "data": [
         {

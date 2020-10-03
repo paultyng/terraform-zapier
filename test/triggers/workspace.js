@@ -10,13 +10,14 @@ describe('Trigger - list_workspaces', () => {
 
   it('should get an array', async () => {
     const bundle = {
+      meta: {
+        page: 1,
+        limit: -1,
+      },
+
       authData: {
         token: process.env.TOKEN,
         organization: process.env.ORGANIZATION,
-        oauth_consumer_key: process.env.OAUTH_CONSUMER_KEY,
-        oauth_consumer_secret: process.env.OAUTH_CONSUMER_SECRET,
-        oauth_token: process.env.OAUTH_TOKEN,
-        oauth_token_secret: process.env.OAUTH_TOKEN_SECRET,
       },
 
       inputData: {},
