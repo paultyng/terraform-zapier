@@ -17,3 +17,5 @@ jobs:
       - run: zapier test
         env:
           CI: true
+          TOKEN: ${{ secrets.TOKEN }}
+          ORGANIZATION: ${{ secrets.ORGANIZATION }}
