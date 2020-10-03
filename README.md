@@ -7,6 +7,10 @@ This Zapier applications provides the following actions:
 * **Create Run** - this creates a run in the Terraform Cloud workspace. Typically you would set your workspace to auto-apply to have this immediately take affect without human intervention.
 * **Update Variable** - use this to set a variable in a Terraform Cloud workspace. You must create the variable first. If the variable is set to HCL format, you must make sure this value is valid HCL (ie. quotes around strings, etc.).
 
+And the following triggers:
+
+* **New Workspace Run** - this triggers is called when a new run is found in your workspace. It can optionally filter by status.
+
 ## Getting Started
 
 1. Create a Terraform Cloud organization and workspace if you haven't already.
