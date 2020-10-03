@@ -18,6 +18,11 @@ const perform = async (z, bundle) => {
     },
     params,
   });
+
+  if (bundle.inputData.filter_status) {
+    return response.json.data.filter(run => bundle.inputData.filter_status.includes(run.attributes.status))
+  }
+
   return response.json.data;
 };
 
